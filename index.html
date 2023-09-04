@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="dist/output.css" />
+    <title>Guess My Number!</title>
+  </head>
+  <body class="bg-[#222] text-[#eee] ">
+    <header class="flex justify-center items-center text-5xl font-blaster mt-4">
+        <h1>Guess the number from 1 to 100</h1>
+    </header>
+    <main class="flex flex-row h-screen justify-center items-center">
+      <!-- left section -->
+      <section class="w-full max-w-[50%] justify-center items-center">
+        <!-- guess -->
+        <div
+          class="border rounded-2xl bg-transparent text-5xl p-10 w-80 text-center justify-center mx-auto"
+        >
+        <p class="flex justify-center items-center font-poppins">
+            Guesses:
+            <br />
+            <p class="guessed-numbers"></p>
+          </p>
+        </div>
+        <!-- input -->
+        <div class="m-6 flex items-center justify-center space-x-2">
+          <input
+            type="number"
+            min="1"
+            max="100"
+            class="guess border-4 border-[#eee] rounded-2xl bg-transparent text-5xl p-10 w-80 text-center justify-center mx-auto"
+          />
+        </div>
+        <!-- button -->
+        <div
+          class="flex flex-row w-full items-center justify-center gap-10 my-10 font-game"
+        >
+          <button
+            class="btn again bg-slate-200 text-black text-xl w-40 rounded-2xl  p-4 hover:bg-slate-400"
+          >
+            again
+          </button>
+          <button
+            class="btn check bg-sky-400 text-black text-xl w-40 rounded-2xl p-4 hover:bg-sky-500"
+          >
+            check
+          </button>
+        </div>
+        <!-- button highscore -->
+        <div class="m-6 flex items-center justify-center space-x-2">
+            <button class="highscore rounded-2xl p-6 text-2xl justify-center bg-slate-500 w-80 font-game ">highscore</button>
+        </div>
+      </section>
+     
+      <!-- modal -->
+      <div  class="highscoreModal hidden fixed overflow-auto justify-center items-center">
+        <div class="modal-content bg-gray-500 p-8 rounded-3xl text-center text-black font-poppins">
+            <button class="close text-sm">x</button>
+            <h2 class="text-2xl font-semibold mb-4">Highscore</h2>
+            <p class="text-lg">Your Highscore is: <p  class="modalHighscore font-bold ">0</p></p>
+            
+            <input type="text"  class="playerNameInput mt-4 p-2 border border-gray-300 rounded-md text-center " placeholder=" Add Player Name" >
+            
+            <button class="addButton mt-2 bg-sky-400  px-4 py-2 rounded-md hover:bg-sky-500">Add</button>
+            
+            <ul class="modalRanking text-left font-medium mt-4"></ul>
+        </div>
+      </div>
+      
+      <!-- right section -->
+      <section
+        class="w-full max-w-[50%] p-8 flex flex-col items-center justify-center"
+      >
+        <div
+          class="number bg-[#eee] text-[#333] rounded-2xl text-8xl w-96 max-w-80 py-20 text-center font-[500] font-game"
+        >
+          ?
+        </div>
+        <div class="flex flex-col mt-10  ">
+          <p class="message text-4xl font-blaster ">Start guessing...</p>
+          <p class="mt-8 text-2xl font-game">Score: <span class="score">20</span></p>
+        </div>
+      </section>
+
+   
+      
+    </main>
+
+    <footer class="flex justify-center items-center">
+      <h5 class="text-3xl font-semibold">Muhammad Fauzan</h5>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

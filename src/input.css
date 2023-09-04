@@ -1,0 +1,7 @@
+@import url("https://fonts.cdnfonts.com/css/press-start-2p");
+@import url("https://fonts.cdnfonts.com/css/new-blackbuster");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
